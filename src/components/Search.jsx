@@ -9,7 +9,7 @@ class Search extends React.Component {
 
   handleInputChange(e) {
     this.props.handleSearchInputChange(e.target.value);
-    console.log(e.target.value);
+
     this.setState({
       value: e.target.value
     });
@@ -25,7 +25,7 @@ class Search extends React.Component {
           onChange={this.handleInputChange.bind(this)}
         />
         <button className="btn hidden-sm-down">
-          <span className="glyphicon glyphicon-search"></span>
+          <span className="glyphicon glyphicon-search"></span>``
         </button>
       </div>
     );
@@ -33,18 +33,18 @@ class Search extends React.Component {
 }
 // This is the uncontrolled component solution
 // It is not used, just here for reference
-var UncontrolledSearch = ({handleSearchInputChange}) => (
-  <div className="search-bar form-inline">
-    <input
-      className="form-control"
-      type="text"
-      onChange={(e) => handleSearchInputChange(e.target.value)}
-    />
-    <button className="btn hidden-sm-down">
-      <span className="glyphicon glyphicon-search"></span>
-    </button>
-  </div>
-);
+// var UncontrolledSearch = ({handleSearchInputChange}) => (
+//   <div className="search-bar form-inline">
+//     <input
+//       className="form-control"
+//       type="text"
+//       onChange={(e) => handleSearchInputChange(e.target.value)}
+//     />
+//     <button className="btn hidden-sm-down">
+//       <span className="glyphicon glyphicon-search"></span>
+//     </button>
+//   </div>
+// );
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined

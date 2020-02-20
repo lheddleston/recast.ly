@@ -2,6 +2,7 @@ import VideoList from './VideoList.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
+import YOUTUBE_API_KEY from '../config/youtube.js';
 class App extends React.Component {
   constructor (props) {
     super(props);
@@ -12,7 +13,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    this.getYouTubeVideos('react tutorials');
+    this.getYouTubeVideos('cats');
   }
   getYouTubeVideos(query) {
     var options = {
